@@ -81,7 +81,6 @@ namespace UserClientAPI
             
             #endregion
             //gets three users from NW and adds them to Identity for Orders testing
-            #region Shamefur Dispray
             Console.WriteLine("skapar tre användare från Northwind och kopplar ihop de");
             await program.Sync();
             List<User> newUsers= await program.AddManualy();
@@ -91,7 +90,6 @@ namespace UserClientAPI
             User Margaret = await program.Login(loginUsers[0]);
             User Steven = await program.Login(loginUsers[1]);
             User Michael= await program.Login(loginUsers[2]);
-            #endregion
             #region Orders part
 
 
@@ -467,7 +465,6 @@ namespace UserClientAPI
             return null;
         }
 
-        #region Shamefur Dispray
         private List<LoginUser> ConverToLoginUsers(List<User> users)
         {
             LoginUser one = new LoginUser();
@@ -539,7 +536,6 @@ namespace UserClientAPI
             Console.WriteLine(resultContent);
             return resultContent;
         }
-        #endregion
     }
 }
    
